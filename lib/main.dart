@@ -47,11 +47,13 @@ class _ButtonColorChangeScreenState extends State<ButtonColorChangeScreen> {
         title: const Text('Size Selector'),
       ),
       body: Center(
-        child: Column(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+           child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 ElevatedButton(
                   onPressed: () {
@@ -100,7 +102,7 @@ class _ButtonColorChangeScreenState extends State<ButtonColorChangeScreen> {
             ),
             const SizedBox(height: 20),
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 ElevatedButton(
                   onPressed: () {
@@ -126,6 +128,7 @@ class _ButtonColorChangeScreenState extends State<ButtonColorChangeScreen> {
               ],
             ),
           ],
+        ),
         ),
       ),
     );
