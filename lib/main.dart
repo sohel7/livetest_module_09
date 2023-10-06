@@ -50,74 +50,80 @@ class _ButtonColorChangeScreenState extends State<ButtonColorChangeScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(16.0), // Add space around buttons
-              child: Wrap(
-                alignment: WrapAlignment.center,
-                spacing: 20, // Set spacing between buttons
-                children: <Widget>[
-                  ElevatedButton(
-                    onPressed: () {
-                      _changeColor('Small', Colors.red);
-                    },
-                    style: ElevatedButton.styleFrom(
-                      primary:
-                      selectedSize == 'Small' ? selectedColor : Colors.blue,
-                    ),
-                    child: const Text('S'),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                ElevatedButton(
+                  onPressed: () {
+                    _changeColor('Small', Colors.red);
+                  },
+                  style: ElevatedButton.styleFrom(
+                    primary:
+                    selectedSize == 'Small' ? selectedColor : Colors.grey,
                   ),
-                  ElevatedButton(
-                    onPressed: () {
-                      _changeColor('Medium', Colors.green);
-                    },
-                    style: ElevatedButton.styleFrom(
-                      primary: selectedSize == 'Medium'
-                          ? selectedColor
-                          : Colors.blue,
-                    ),
-                    child: const Text('M'),
+                  child: const Text('S'),
+                ),
+                const SizedBox(width: 20),
+                ElevatedButton(
+                  onPressed: () {
+                    _changeColor('Medium', Colors.green);
+                  },
+                  style: ElevatedButton.styleFrom(
+                    primary:
+                    selectedSize == 'Medium' ? selectedColor : Colors.grey,
                   ),
-                  ElevatedButton(
-                    onPressed: () {
-                      _changeColor('Large', Colors.orange);
-                    },
-                    style: ElevatedButton.styleFrom(
-                      primary:
-                      selectedSize == 'Large' ? selectedColor : Colors.blue,
-                    ),
-                    child: const Text('L'),
+                  child: const Text('M'),
+                ),
+                const SizedBox(width: 20),
+                ElevatedButton(
+                  onPressed: () {
+                    _changeColor('Large', Colors.orange);
+                  },
+                  style: ElevatedButton.styleFrom(
+                    primary:
+                    selectedSize == 'Large' ? selectedColor : Colors.grey,
                   ),
-                  ElevatedButton(
-                    onPressed: () {
-                      _changeColor('XL', Colors.orange);
-                    },
-                    style: ElevatedButton.styleFrom(
-                      primary: selectedSize == 'XL' ? selectedColor : Colors.blue,
-                    ),
-                    child: const Text('XL'),
+                  child: const Text('L'),
+                ),
+                const SizedBox(width: 20),
+                ElevatedButton(
+                  onPressed: () {
+                    _changeColor('XL', Colors.yellow);
+                  },
+                  style: ElevatedButton.styleFrom(
+                    primary:
+                    selectedSize == 'XL' ? selectedColor : Colors.grey,
                   ),
-                  ElevatedButton(
-                    onPressed: () {
-                      _changeColor('XXL', Colors.orange);
-                    },
-                    style: ElevatedButton.styleFrom(
-                      primary:
-                      selectedSize == 'XXL' ? selectedColor : Colors.blue,
-                    ),
-                    child: const Text('XXL'),
+                  child: const Text('XL'),
+                ),
+              ],
+            ),
+            const SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                ElevatedButton(
+                  onPressed: () {
+                    _changeColor('XXL', Colors.orange);
+                  },
+                  style: ElevatedButton.styleFrom(
+                    primary:
+                    selectedSize == 'XXL' ? selectedColor : Colors.grey,
                   ),
-                  ElevatedButton(
-                    onPressed: () {
-                      _changeColor('XXXL', Colors.orange);
-                    },
-                    style: ElevatedButton.styleFrom(
-                      primary:
-                      selectedSize == 'XXXL' ? selectedColor : Colors.blue,
-                    ),
-                    child: const Text('XXXL'),
+                  child: const Text('XXL'),
+                ),
+                const SizedBox(width: 20),
+                ElevatedButton(
+                  onPressed: () {
+                    _changeColor('XXXL', Colors.red);
+                  },
+                  style: ElevatedButton.styleFrom(
+                    primary:
+                    selectedSize == 'XXXL' ? selectedColor : Colors.grey,
                   ),
-                ],
-              ),
+                  child: const Text('XXXL'),
+                ),
+              ],
             ),
           ],
         ),
