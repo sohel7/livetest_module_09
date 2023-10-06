@@ -21,7 +21,7 @@ class ButtonColorChangeScreen extends StatefulWidget {
 
 class _ButtonColorChangeScreenState extends State<ButtonColorChangeScreen> {
   String selectedSize = "";
-  Color selectedColor = Colors.blue; // Default color
+  Color selectedColor = Colors.grey; // Default color
 
   void _changeColor(String size, Color color) {
     setState(() {
